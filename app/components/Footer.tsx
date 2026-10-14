@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TutedudeLogo from "./TutedudeLogo";
 
 const links = [
   { label: "About the event", href: "#the-buildathon" },
@@ -18,7 +19,7 @@ export default function Footer() {
               href="/"
               aria-label="Tutedude home"
             >
-            <img src="https://www.tutedude.com/assets/avif/TutedudeLogo.avif" alt="tutedude" />
+            <TutedudeLogo />
             </Link>
             <p className="mt-3 text-xs leading-[1.4] text-[var(--text-secondary)]">
               An online buildathon for curious student minds.
@@ -32,7 +33,8 @@ export default function Footer() {
                 href={link.href}
                 key={link.label}
               >
-                {link.label}
+                            {link.label}
+
               </Link>
             ))}
           </nav>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import TutedudeLogo from "./TutedudeLogo";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import gsap from "gsap";
@@ -64,7 +65,7 @@ export default function SiteNavbar() {
     }}>
       <div className="main-nav-container">
         <Link href="/" className="wordmark" aria-label="Tutedude home" onClick={() => setOpen(false)}>
-          tute<span>dude</span><span className="logo-dot">®</span>
+          <TutedudeLogo />
         </Link>
         <nav className="main-nav-links" aria-label="Main navigation">
           {links.map(([href, label]) => <a key={href} href={href}>{label}</a>)}

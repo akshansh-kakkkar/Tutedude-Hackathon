@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TutedudeLogo from "./components/TutedudeLogo";
 import PortalPreview from "./components/PortalPreview";
 import SiteMotion from "./components/SiteMotion";
 import SiteNavbar from "./components/SiteNavbar";
@@ -59,7 +60,7 @@ export default function Home() {
         <section id="faqs" className="section faq-section"><div><p className="eyebrow">04 / CLEARING THE TABS</p><h2>Good questions.<br /><span className="purple-text">Straight answers.</span></h2><p className="faq-aside">Because the only thing you should be<br />overthinking is your next idea.</p><span className="faq-doodle" aria-hidden="true">?</span></div><div className="faq-list">{faqs.map(([question,answer]) => <AnimatedFaq key={question} question={question}>{answer}</AnimatedFaq>)}</div></section>
         <section id="register" className="register-section"><p className="eyebrow">BETTER WEBSITES. HAPPIER CITIZENS. YOUR MOVE.</p><h2>India’s portals.<br /><span>Your glow-up.</span><span className="cta-star" aria-hidden="true">✳</span></h2><Link href="/form" className="button button-dark">Count me in <ArrowUpRight size={22} /></Link><p>Tutedude or non-Tutedude. All builders welcome.</p><div className="cta-details"><span>100% online</span><span>Beginner-friendly</span><span>Dates coming soon</span></div></section>
       </main>
-      <footer className="new-footer"><div><Link href="/" className="wordmark">tute<span>dude</span><span className="logo-dot">®</span></Link><p>Build a better digital experience for Bharat.</p></div><nav aria-label="Footer navigation"><a href="#tracks">The challenge</a><a href="#prizes">Prizes</a><a href="#faqs">FAQs</a><Link href="/form">Register interest ↗</Link></nav><div className="footer-bottom"><span>© Tutedude. All rights reserved.</span><span>MADE OF CURIOSITY. BUILT BY YOU. ✳</span></div></footer>
+      <footer className="new-footer"><div><Link href="/" className="wordmark"><TutedudeLogo /></Link><p>Build a better digital experience for Bharat.</p></div><nav aria-label="Footer navigation"><a href="#tracks">The challenge</a><a href="#prizes">Prizes</a><a href="#faqs">FAQs</a><Link href="/form">Register interest ↗</Link></nav><div className="footer-bottom"><span>© Tutedude. All rights reserved.</span><span>MADE OF CURIOSITY. BUILT BY YOU. ✳</span></div></footer>
     </div>
   );
 }

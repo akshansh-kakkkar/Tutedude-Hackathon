@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TutedudeLogo from "./TutedudeLogo";
 
 const navigation = [
   { label: "The buildathon", href: "#the-buildathon" },
@@ -27,7 +28,7 @@ export default function Navbar() {
           href="/"
           aria-label="Tutedude home"
         >
-         <img src="https://www.tutedude.com/assets/avif/TutedudeLogo.avif" alt="tute-dude-logo" />
+         <TutedudeLogo />
         </Link>
 
         <div className="flex items-center gap-9 max-[720px]:hidden">

@@ -33,7 +33,7 @@ export default function RegistrationPage() {
         </div>
         <p className="mt-6 text-sm text-[#666168]">
           Form not loading?{" "}
-          <a href="https://forms.fillout.com/t/h3shPLWaBVus" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-[var(--accent)] underline">
+          <a href="https://forms.fillout.com/t/pgewK4yeByus" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-[var(--accent)] underline">
             Open the registration form <ArrowUpRight size={15} />
           </a>
         </p>
