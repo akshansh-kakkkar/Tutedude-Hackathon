@@ -14,18 +14,20 @@ export default function HeroSection() {
     <>
       <section
         id="the-buildathon"
-        className="bg-[var(--surface-lavender)] px-[72px] py-16 max-[720px]:px-6 max-[720px]:py-12"
+        className="relative overflow-hidden bg-[var(--surface-lavender)] px-[72px] py-16 max-[720px]:px-6 max-[720px]:py-12"
       >
+        <span className="pointer-events-none absolute top-12 left-[6%] text-[45px] text-[var(--hot-pink)] max-[720px]:hidden" aria-hidden="true">✦</span>
+        <span className="pointer-events-none absolute right-[5%] bottom-11 rounded-full border-2 border-[var(--text-primary)] bg-[var(--acid-green)] px-4 py-2 text-xs font-black tracking-[0.12em] text-[var(--text-primary)] uppercase shadow-[4px_4px_0_var(--text-primary)] max-[960px]:hidden" aria-hidden="true">main character build</span>
         <div className="mx-auto grid max-w-[1296px] grid-cols-[minmax(0,520px)_minmax(0,1fr)] items-center gap-24 max-[960px]:gap-12 max-[720px]:grid-cols-1 max-[720px]:gap-10">
           <div>
-            <p className="mb-7 flex items-center gap-2.5 text-xs leading-none font-bold tracking-[-0.15px] text-[var(--brand-purple)] uppercase">
-              <span className="size-[7px] rounded-full bg-[var(--brand-purple)]" />
+            <p className="mb-7 flex w-fit items-center gap-2.5 rounded-full border border-[var(--brand-purple)] bg-[var(--background)] px-3 py-2 text-xs leading-none font-bold tracking-[-0.15px] text-[var(--brand-purple)] uppercase shadow-[3px_3px_0_var(--brand-purple)]">
+              <span className="size-[7px] rounded-full bg-[var(--hot-pink)]" />
               An online hackathon for student builders
             </p>
 
             <h1 className="font-serif text-[84px] leading-[0.91] font-semibold tracking-[-5px] text-[var(--text-primary)] max-[960px]:text-[clamp(62px,8vw,84px)] max-[720px]:text-[clamp(57px,16vw,76px)]">
               Tutedude
-              <span className="relative mt-2 block w-fit pr-2 italic text-[var(--brand-purple)]">
+              <span className="relative mt-2 block w-fit pr-2 italic text-[var(--brand-purple)] [text-shadow:3px_3px_0_var(--acid-green)]">
                 Buildathon
                 <svg
                   className="absolute -right-1 -bottom-5 h-4 w-[calc(100%+12px)] overflow-visible"
@@ -48,7 +50,7 @@ export default function HeroSection() {
 
             <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-4">
               <Link
-                className="inline-flex min-h-[50px] items-center gap-6 rounded-lg bg-[var(--brand-purple)] px-5 text-sm font-bold text-white no-underline transition-[background-color,transform] duration-150 hover:-translate-y-px hover:bg-[var(--deep-purple)] focus-visible:outline-3 focus-visible:outline-[var(--text-primary)] focus-visible:outline-offset-4 motion-reduce:transition-none"
+                className="inline-flex min-h-[50px] items-center gap-6 rounded-lg border-2 border-[var(--text-primary)] bg-[var(--brand-purple)] px-5 text-sm font-bold text-white no-underline shadow-[4px_4px_0_var(--text-primary)] transition-[background-color,transform,box-shadow] duration-150 hover:translate-x-0.5 hover:translate-y-0.5 hover:bg-[var(--deep-purple)] hover:shadow-[1px_1px_0_var(--text-primary)] focus-visible:outline-3 focus-visible:outline-[var(--text-primary)] focus-visible:outline-offset-4 motion-reduce:transition-none"
                 href="/form"
               >
                 Register your interest <ArrowUpRight />
@@ -76,15 +78,23 @@ export default function HeroSection() {
               height={510}
               priority
             />
-            <p className="absolute right-[5%] bottom-[3%] w-[200px] rotate-[-8deg] bg-[var(--surface-yellow)] px-5 py-7 font-[family-name:var(--font-caveat)] text-[25px] leading-[1.3] font-bold text-[var(--text-primary)] shadow-none max-[960px]:w-[175px] max-[960px]:px-4 max-[960px]:py-5 max-[960px]:text-[22px] max-[720px]:right-[3%]">
+            <p className="floaty-sticker absolute right-[5%] bottom-[3%] w-[200px] rotate-[-8deg] border-2 border-[var(--text-primary)] bg-[var(--surface-yellow)] px-5 py-7 font-[family-name:var(--font-caveat)] text-[25px] leading-[1.3] font-bold text-[var(--text-primary)] shadow-[5px_5px_0_var(--text-primary)] max-[960px]:w-[175px] max-[960px]:px-4 max-[960px]:py-5 max-[960px]:text-[22px] max-[720px]:right-[3%]">
               Your ideas belong here.
             </p>
           </div>
         </div>
       </section>
 
-      <div className="overflow-hidden bg-[var(--brand-purple)] px-[72px] text-[var(--surface-yellow)] max-[720px]:px-6">
-        <div className="mx-auto flex h-[59px] max-w-[1296px] items-center justify-between gap-8 whitespace-nowrap text-xs font-bold uppercase max-[720px]:justify-start max-[720px]:gap-7 max-[720px]:overflow-x-auto">
+      <div className="overflow-hidden border-y-2 border-[var(--text-primary)] bg-[var(--brand-purple)] text-[var(--surface-yellow)]">
+        <div className="ticker-track flex h-[59px] w-max items-center gap-8 whitespace-nowrap px-8 text-xs font-black tracking-[0.08em] uppercase">
+          <span>A little curiosity</span>
+          <span aria-hidden="true">✱</span>
+          <span>A lot of making</span>
+          <span aria-hidden="true">✱</span>
+          <span>Your next big idea</span>
+          <span aria-hidden="true">✱</span>
+          <span>Built together</span>
+          <span aria-hidden="true">✱</span>
           <span>A little curiosity</span>
           <span aria-hidden="true">✱</span>
           <span>A lot of making</span>

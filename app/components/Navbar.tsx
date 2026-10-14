@@ -17,7 +17,7 @@ function ArrowUpRight() {
 
 export default function Navbar() {
   return (
-    <header className="border-b border-[var(--border-subtle)] bg-[var(--surface-lavender)]">
+    <header className="border-b-2 border-[var(--text-primary)] bg-[var(--surface-lavender)]">
       <nav
         className="mx-auto grid min-h-18 w-full max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-[72px] max-[720px]:min-h-[76px] max-[720px]:grid-cols-[1fr_auto_auto] max-[720px]:gap-4 max-[720px]:px-6"
         aria-label="Primary navigation"
@@ -43,7 +43,7 @@ export default function Navbar() {
         </div>
 
         <Link
-          className="col-start-3 inline-flex min-h-[50px] justify-self-end items-center gap-6 rounded-lg bg-[var(--brand-purple)] px-[22px] text-sm leading-none font-bold text-[var(--white)] no-underline transition-[background-color,transform] duration-150 hover:-translate-y-px hover:bg-[var(--deep-purple)] focus-visible:outline-3 focus-visible:outline-[var(--text-primary)] focus-visible:outline-offset-4 motion-reduce:transition-none max-[720px]:col-auto max-[720px]:min-h-11 max-[720px]:gap-2.5 max-[720px]:px-3.5 max-[720px]:text-[13px]"
+          className="col-start-3 inline-flex min-h-[50px] justify-self-end items-center gap-6 rounded-lg border-2 border-[var(--text-primary)] bg-[var(--brand-purple)] px-[22px] text-sm leading-none font-bold text-[var(--white)] no-underline shadow-[3px_3px_0_var(--text-primary)] transition-[background-color,transform,box-shadow] duration-150 hover:translate-x-0.5 hover:translate-y-0.5 hover:bg-[var(--deep-purple)] hover:shadow-none focus-visible:outline-3 focus-visible:outline-[var(--text-primary)] focus-visible:outline-offset-4 motion-reduce:transition-none max-[720px]:col-auto max-[720px]:min-h-11 max-[720px]:gap-2.5 max-[720px]:px-3.5 max-[720px]:text-[13px]"
           href="/form"
         >
           <span>Count me in</span>
