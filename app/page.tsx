@@ -38,7 +38,7 @@ export default function Home() {
       <SiteMotion />
       <a href="#main" className="skip-link">Skip to content</a>
       <div className="announcement">
-        TUTEDUDE BUILDATHON <span aria-hidden="true">/</span> INDIAN GOVERNMENT WEBSITES, REBUILT.
+        SYSTEM / TUTEDUDE BUILDATHON <span aria-hidden="true">{"//"}</span> STATUS: OPEN
       </div>
       <SiteNavbar />
       <main id="main">
@@ -46,16 +46,16 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow"><span className="status-dot" aria-hidden="true" /> ONLINE BUILDATHON / OPEN TO EVERYONE</p>
             <h1 id="hero-title">
-              <span className="hero-line"><span className="hero-word">GOVT SITES.</span></span>
-              <span className="hero-line"><span className="hero-word outline-type">BUILT BETTER.</span></span>
-              <span className="hero-line"><span className="hero-word">BY YOU<span className="headline-period">.</span></span></span>
+              <span className="hero-line"><span className="hero-word">BREAK THE</span></span>
+              <span className="hero-line"><span className="hero-word outline-type">BAD FLOW.</span></span>
+              <span className="hero-line"><span className="hero-word">REBUILD IT<span className="headline-period">.</span></span></span>
             </h1>
-            <p className="hero-description">Pick an Indian government website. Find what gets in the way. Build a version that works better for the people using it.</p>
+            <p className="hero-description">Audit an Indian government website. Find the friction. Rebuild the journey so it works for the people using it.</p>
             <div className="hero-actions">
-              <Link href="/form" className="button">Take the challenge <ArrowUpRight size={19} aria-hidden="true" /></Link>
-              <a href="#about" className="text-link">Read the brief <ArrowDown size={15} aria-hidden="true" /></a>
+              <Link href="/form" className="button">Enter the build <ArrowUpRight size={19} aria-hidden="true" /></Link>
+              <a href="#about" className="text-link">Open the brief <ArrowDown size={15} aria-hidden="true" /></a>
             </div>
-            <p className="hero-note">Designers, developers, and first-time builders welcome.</p>
+            <p className="hero-note">No prior hackathon required. Just bring a sharp eye and a better idea.</p>
             <div className="hero-prize-line"><strong>{prizePoolLabel}</strong><span>total prize pool</span></div>
           </div>
           <HeroPatch />
@@ -68,9 +68,9 @@ export default function Home() {
         </section>
 
         <div className="brief-strip">
-          <span className="eyebrow">THE ASSIGNMENT</span>
-          <p>Redesign a government website around the people using it.</p>
-          <a href="#tracks">Find a starting point <ArrowUpRight size={16} aria-hidden="true" /></a>
+          <span className="eyebrow">MISSION / 001</span>
+          <p>Find one broken citizen journey. Make it work.</p>
+          <a href="#tracks">Choose your target <ArrowUpRight size={16} aria-hidden="true" /></a>
         </div>
 
         <section id="about" className="section about-section">

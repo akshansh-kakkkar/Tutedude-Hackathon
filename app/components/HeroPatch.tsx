@@ -1,33 +1,42 @@
-import { FileCode2, GitBranch } from "lucide-react";
-
-const lines = [
-  { number: "18", type: "context", code: '<nav aria-label="Services">' },
-  { number: "19", type: "removed", code: '  <a href="/forms">Click here</a>' },
-  { number: "19", type: "added", code: '  <a href="/certificates/apply">' },
-  { number: "20", type: "added", code: "    Apply for a certificate" },
-  { number: "21", type: "added", code: "  </a>" },
-  { number: "22", type: "context", code: "</nav>" },
-];
+import { Activity, Cpu, FileCode2, GitBranch, Network, ShieldCheck } from "lucide-react";
 
 export default function HeroPatch() {
   return (
-    <figure className="hero-workbench" aria-label="Example code change: replace a vague Click here link with Apply for a certificate, linking directly to the service.">
-      <div className="workbench-label" aria-hidden="true"><span>EXAMPLE / CITIZEN PORTAL</span><span>PATCH / 001</span></div>
-      <div className="patch-window" aria-hidden="true">
-        <div className="patch-toolbar"><span><FileCode2 size={15} /> services.html</span><span><GitBranch size={13} /> redesign</span></div>
-        <div className="patch-heading"><span>Make the action clear.</span><span className="patch-stats">−1 / +3</span></div>
-        <div className="patch-code">
-          {lines.map((line, index) => (
-            <div className={`patch-line patch-${line.type}`} key={index}>
-              <span className="patch-number">{line.number}</span>
-              <span className="patch-sign">{line.type === "added" ? "+" : line.type === "removed" ? "−" : " "}</span>
-              <code>{line.code}</code>
-            </div>
-          ))}
+    <figure className="hero-workbench" aria-label="Terminal showing a website audit and rebuild workflow for a citizen portal.">
+      <div className="workbench-label" aria-hidden="true"><span>BUILD CONSOLE / 01</span><span><i /> LIVE SESSION</span></div>
+      <div className="terminal-shell">
+        <header className="terminal-tabs" aria-hidden="true">
+          <span className="terminal-tab-active"><FileCode2 size={14} /> citizen-portal</span><span>audit.log</span><span>+</span><span className="terminal-window-actions">— □ ×</span>
+        </header>
+        <div className="terminal-main" aria-hidden="true">
+          <div className="terminal-command"><span>builder@tutedude:~$</span> ./inspect --site citizen-portal</div>
+          <div className="terminal-output-line"><span className="terminal-muted">[scan]</span> mapping the applicant journey...</div>
+          <div className="terminal-output-line terminal-warning"><span>[!]</span> vague action found: “Click here”</div>
+          <div className="terminal-command"><span>builder@tutedude:~$</span> ./rebuild --make-it-clear</div>
+          <div className="terminal-output-line"><span className="terminal-success">[ok]</span> route: /certificates/apply</div>
+          <div className="terminal-output-line"><span className="terminal-success">[ok]</span> label: Apply for a certificate</div>
+          <div className="terminal-command"><span>builder@tutedude:~$</span> git diff --stat</div>
+          <div className="terminal-diff"><span className="terminal-success">+</span> 3 additions <span className="terminal-warning">−</span> 1 removal <span className="terminal-muted">/ services.html</span></div>
+          <div className="terminal-command terminal-cursor"><span>builder@tutedude:~$</span><b>▊</b></div>
         </div>
-        <div className="patch-footer"><span>1 file changed</span><span>HTML <span className="patch-caret">▊</span></span></div>
+        <aside className="terminal-sidebar" aria-hidden="true">
+          <div><Activity size={14} /><span>STATUS</span></div><strong>READY</strong><span>01 / ISSUE FOUND</span><span>02 / ROUTE FIXED</span><span>03 / READY TO SHIP</span><div className="terminal-branch"><GitBranch size={13} /> main</div>
+        </aside>
+        <footer className="terminal-statusbar" aria-hidden="true"><span>UTF-8</span><span><ShieldCheck size={12} /> ACCESSIBLE BUILD</span><span>Ln 24, Col 1</span></footer>
       </div>
-      <figcaption className="patch-caption"><span>THE IDEA</span><p>A clear label. A direct link.<br />One less thing for someone to figure out.</p></figcaption>
+      <div className="computer-rig" aria-hidden="true">
+        <div className="rig-cable rig-cable-left" />
+        <div className="rig-cable rig-cable-right" />
+        <div className="rig-monitor-base"><span /><span /><span /></div>
+        <div className="rig-keyboard">
+          <div className="rig-key-row"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
+          <div className="rig-key-row"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
+          <div className="rig-key-row rig-key-row-last"><i /><i /><i /><i /><i /><i /><i /><i /></div>
+        </div>
+        <div className="rig-node rig-node-left"><Cpu size={14} /><span>CORE</span><b /><b /><b /></div>
+        <div className="rig-node rig-node-right"><Network size={14} /><span>UPLINK</span><strong>03</strong></div>
+      </div>
+      <figcaption className="patch-caption"><span>YOUR MISSION</span><p>Spot the friction. Rewrite the flow.<br />Ship a clearer public service.</p></figcaption>
     </figure>
   );
 }
