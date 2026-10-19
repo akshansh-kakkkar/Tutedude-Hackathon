@@ -14,21 +14,21 @@ export default function RegistrationPage() {
           <div>
             <p className="eyebrow mt-10 text-[var(--accent)]">TUTEDUDE BUILDATHON</p>
             <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Your government website glow-up starts here.
+              Register your interest.
             </h1>
             <p className="mt-4 mb-8 text-sm leading-7 text-[#666168]">
-              Tutedude student or joining us for the first time? You’re welcome here.
-              Reimagine an Indian government website and compete for a {prizePoolLabel} prize pool.
-              Register your interest below.
+              Build a better version of an Indian government website and compete for a {prizePoolLabel} prize pool.
+              Leave your details to receive the event dates, rules, and next steps.
+              Open to Tutedude students and non-Tutedude participants.
             </p>
           </div>
           <div className="registration-prize mb-8">
-            <span>BUILD BETTER. WIN BIG.</span>
+            <span>PRIZES / INR</span>
             <strong>{prizePoolLabel}</strong>
             <span>TOTAL PRIZE POOL</span>
           </div>
         </div>
-        <div className="registration-form-shell overflow-hidden rounded-xl border border-[#dcdadd] bg-white">
+        <div className="registration-form-shell overflow-hidden border border-[#dcdadd] bg-white">
           <RegistrationForm />
         </div>
         <p className="mt-6 text-sm text-[#666168]">

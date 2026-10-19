@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Check, CheckCircle2, MousePointer2, Search, Sparkles } from "lucide-react";
+import { ArrowRight, Check, MousePointer2, Search } from "lucide-react";
 
 export default function PortalPreview() {
   const [redesigned, setRedesigned] = useState(true);
@@ -9,36 +9,36 @@ export default function PortalPreview() {
   return (
     <section className="section preview-section" aria-labelledby="preview-title">
       <div className="preview-copy">
-        <p className="eyebrow">THE SAME SERVICE. A WHOLE NEW FEELING.</p>
-        <h2 id="preview-title">From digital maze.<br />To <span className="purple-text">“that was easy.”</span></h2>
-        <p>You know the experience. A dozen links, a confusing form, and no idea what comes next. Now imagine being the person who fixes it.</p>
+        <p className="eyebrow">02 / IN PRACTICE</p>
+        <h2 id="preview-title">Same service.<br /><span className="purple-text">A clearer route.</span></h2>
+        <p>A visitor needs a certificate. Give them a way to apply, a way to check its status, and labels they can understand. Here’s what that could look like.</p>
         <ul className="preview-benefits">
-          <li><CheckCircle2 size={18} /> Clear next steps, fewer dead ends.</li>
-          <li><CheckCircle2 size={18} /> Designed for people, on every screen.</li>
-          <li><CheckCircle2 size={18} /> A public service that feels like a service.</li>
+          <li><span aria-hidden="true">01</span> Put the common tasks up front.</li>
+          <li><span aria-hidden="true">02</span> Say where each link will take you.</li>
+          <li><span aria-hidden="true">03</span> Make room for smaller screens.</li>
         </ul>
-        <span className="preview-caption"><MousePointer2 size={16} /> Tap the tabs. See the difference.</span>
+        <span className="preview-caption"><MousePointer2 size={14} aria-hidden="true" /> Compare the two layouts</span>
       </div>
       <div className="preview-stage">
         <div className="preview-controls" role="group" aria-label="Compare example portal designs">
-          <button type="button" aria-pressed={!redesigned} onClick={() => setRedesigned(false)}>The usual experience</button>
-          <button type="button" aria-pressed={redesigned} onClick={() => setRedesigned(true)}><Sparkles size={14} /> The glow-up</button>
+          <button type="button" aria-pressed={!redesigned} aria-controls="portal-example" onClick={() => setRedesigned(false)}>01 / Before</button>
+          <button type="button" aria-pressed={redesigned} aria-controls="portal-example" onClick={() => setRedesigned(true)}>02 / After</button>
         </div>
         <div className="portal-frame">
           <div className="portal-browser"><div><i /><i /><i /></div><span>citizen-portal / concept preview</span><span aria-hidden="true">↗</span></div>
-          <div role="region" aria-label={redesigned ? "Redesigned portal concept" : "Original portal concept"} aria-live="polite" className={`portal-example ${redesigned ? "portal-after" : "portal-before"}`} key={String(redesigned)}>
+          <div id="portal-example" role="region" aria-label={redesigned ? "Redesigned portal concept" : "Original portal concept"} aria-live="polite" className={`portal-example ${redesigned ? "portal-after" : "portal-before"}`} key={String(redesigned)}>
             {redesigned ? <>
-              <div className="portal-brand"><span className="portal-symbol">c.</span><strong>Citizen services</strong><span>Built around you.</span></div>
-              <span className="portal-welcome">LESS PAPERWORK ENERGY.</span>
-              <h3>Your next step.<br />Right here.</h3>
-              <div className="portal-search"><Search size={15} /><span>What would you like to do?</span><ArrowRight size={17} /></div>
+              <div className="portal-brand"><span className="portal-symbol">c.</span><strong>Citizen services</strong><span>Service directory</span></div>
+              <span className="portal-welcome">PUBLIC SERVICES</span>
+              <h3>What do you<br />need to do?</h3>
+              <div className="portal-search"><Search size={15} /><span>Find a service</span><ArrowRight size={17} /></div>
               <div className="portal-services"><div><span>01</span><strong>Apply for a certificate</strong><ArrowRight size={15} /></div><div><span>02</span><strong>Track an application</strong><ArrowRight size={15} /></div></div>
-              <div className="portal-status"><Check size={14} /><span>Clear steps. Accessible design. Mobile-ready.</span></div>
+              <div className="portal-status"><Check size={14} /><span>Applications and status, in one place.</span></div>
             </> : <>
               <div className="old-heading">CITIZEN SERVICES PORTAL</div><div className="old-nav">HOME | ABOUT US | DEPARTMENTS | DOWNLOADS</div>
               <div className="old-notice">NOTICE: Please read all instructions before proceeding.</div>
               <div className="old-columns"><div><u>Important links</u><span>Application forms</span><span>Online services (NEW)</span><span>Click here for details</span><span>Other services</span></div><div><h3>Welcome to the portal</h3><p>For application submission, kindly refer to the relevant section below.</p><span className="old-link">Click here to proceed &gt;&gt;</span><span className="old-link">Download instructions (PDF)</span></div></div>
-              <div className="old-bottom">Best viewed on desktop. Where do you click next?</div>
+              <div className="old-bottom">Best viewed on a desktop computer.</div>
             </>}
           </div>
         </div>

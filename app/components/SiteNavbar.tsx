@@ -7,7 +7,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import gsap from "gsap";
 
 const links = [
-  ["#about", "The lowdown"],
+  ["#about", "The brief"],
   ["#tracks", "The challenge"],
   ["#prizes", "Prizes"],
   ["#timeline", "How it works"],
@@ -72,7 +72,7 @@ export default function SiteNavbar() {
         </nav>
         <div className="main-nav-actions">
           <Link href="/form" className="button button-small" onClick={() => setOpen(false)}>
-            Join the build <ArrowUpRight size={17} aria-hidden="true" />
+            Register interest <ArrowUpRight size={17} aria-hidden="true" />
           </Link>
           <button className="main-menu-toggle" type="button" ref={toggle}
             aria-expanded={open} aria-controls="main-mobile-menu" aria-label={open ? "Close navigation" : "Open navigation"}
@@ -85,7 +85,7 @@ export default function SiteNavbar() {
         {links.map(([href, label], index) => (
           <a key={href} href={href} onClick={() => setOpen(false)}><span>0{index + 1}</span>{label}<ArrowUpRight size={17} aria-hidden="true" /></a>
         ))}
-        <p>ONLINE. OPEN TO EVERYONE. ALL YOU.</p>
+        <p>FULLY ONLINE / OPEN TO EVERYONE</p>
       </nav>
     </header>
   );
